@@ -5,17 +5,17 @@ Astrocyte and Neuron Calcium Movie Analysis with MATLAB and CHIPS
 1.	System requirements
 -	-MATLAB version 2018b or newer (code has been tested most recently on MATLAB 2019a and 2020b).
 -	MATLAB Image Processing and Signal Processing Toolboxes
--	CHIPS toolbox (//github.com/EIN-lab/CHIPS/releases)
+-	CHIPS toolbox (https://github.com/EIN-lab/CHIPS/releases)
 -	BioFormats toolbox (https://docs.openmicroscopy.org/bio-formats/6.1.0/users/matlab/index.html)- required to open microscope images of different file formats.
 -	Fiji/ImageJ (https://imagej.net/software/fiji/downloads- for circling regions of interest (such as neuronal somata)
 
 2.	Installation guide
 a)	Install MATLAB (version newer than 2018b) and Fiji (optional). Typical install time on a normal computer (15-20 min).
-b)	Save the CHIPS and BioFormats toolbox on the MATLAB path.  These folders are located in the MATLAB files folder or can be downloaded at the links above.
+b)	Save the CHIPS and BioFormats toolbox on the MATLAB path.  These can be downloaded at the links above.
 
 3.	Demo and instructions for use
 
-a)	Demo code outlining the functions and steps in MATLAB for the calcium analysis in this paper is available in the CHIPS_Demo.m file.  Please see this file for more information.  It takes approximately 4 minutes to process this example on a typical computer.
+a)	Demo code outlining the functions and steps in MATLAB for the calcium analysis in Ahmadpour et al. 2024 is available in the CHIPS_Demo.m file.  Please see this file for more information.  It takes approximately 4 minutes to process this example on a typical computer.
 b)	Example data was acquired on a Bruker two-photon microscope using PrairieView software.  The BioFormats toolbox is needed to extract the metadata from these files within MATLAb and this toolbox will work for importing images from most microscope systems.
 c)	Active regions of interest (ROIs) are identified based on the FLIKA algorithm from Ellefsen et al. (2014)1.
 d)	Expected output: Generates 3 graphs of astrocyte and neuron ROIs identified and their example traces. It also output 3 csv files per analysis step (9 files total) that contains the traces and ROI identification information as well as the signal peaks found in each ROI and their parameters (amplitude, timing, etc.).
